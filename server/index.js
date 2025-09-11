@@ -1,10 +1,12 @@
 const express = require("express")
+const cors = require("cors")
 const { default: mongoose } = require("mongoose")
 const Todo = require("./model/todoSchema")
 require('dotenv').config()
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 // database conntection
 mongoose
